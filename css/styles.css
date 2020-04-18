@@ -25,6 +25,7 @@ body {
 #logo {
   font-family: Euphoria, monospace, Arial, Helvetica, sans-serif;
   font-size: 120px;
+  margin-top: 80px;
 }
 #logo svg {
   width: 100%;
