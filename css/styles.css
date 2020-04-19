@@ -6,6 +6,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -100,16 +101,16 @@ body {
 }
 
 .footer {
-  width: 100%;
+  width: 80%;
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  margin: 30px auto 0;
 }
 
 .footer .icon {
   margin: 0 10px;
-  height: 32px;
+  height: 52px;
   line-height: 1;
   transition: all 0.3s;
   opacity: 1;
@@ -148,4 +149,19 @@ body {
 /*滚动条右下角区域*/
 ::-webkit-scrollbar-corner {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 768px) {
+  #logo {
+    font-size: 140px;
+    margin-top: 0px;
+  }
+  #section {
+    margin-top: -60px;
+  }
+  .dynamic {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
 }
