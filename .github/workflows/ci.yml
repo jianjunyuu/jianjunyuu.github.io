@@ -42,10 +42,12 @@ jobs:
         run: pnpm build
 
       - name: deploy
-        run: |
-          cd docs/.vitepress/dist
-          echo 'yujianjun.me' > CNAME
-          git add -A
-          git commit -m 'deploy'
-          git push -f git@github.com:jianjunyuu/jianjunyuu.github.io.git gh-pages.
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_branch: gh-pages  # default: gh-pages
+          publish_dir: docs/.vitepress/dist  # default: public
+          cname: yujianjun.me
+          keep_files: false
+          commit_message: ${{ github.event.head_commit.message }}
           
