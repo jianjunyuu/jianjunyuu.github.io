@@ -23,13 +23,20 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      
-      - name: clone
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+        
+#       - name: install Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 16
 
       # Runs a single command using the runners shell
       - name: install
         run: pnpm install
+        
         
       - name: build
         run: pnpm build
