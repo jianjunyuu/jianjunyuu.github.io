@@ -39,7 +39,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd docs/.vitepress/dist,
-          echo 'yujianjun.me' > CNAME
+          echo 'yujianjun.me' > CNAME,
           git add -A,
           git commit -m 'deploy',
           git push -f git@github.com:jianjunyuu/jianjunyuu.github.io.git gh-pages.
