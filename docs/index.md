@@ -73,7 +73,7 @@ import Home from './components/Home.vue'
 
 
 <Home>
-    <img src="./public/javascript.gif" style="width: 640px;margin: 20px auto 50px;"/>
+    <img src="./Javascript.gif" style="width: 640px;margin: 20px auto 50px;"/>
 
 [流程和规范化](./%E6%B5%81%E7%A8%8B%E5%92%8C%E8%A7%84%E8%8C%83%E5%8C%96.md)
 
